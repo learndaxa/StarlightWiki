@@ -11,7 +11,7 @@ export default defineConfig({
     starlight({
       title: import.meta.env.VITE_TITLE,
       customCss: ['./src/tailwind.css'],
-      favicon: './src/assets/logo.png',
+      favicon: '/favicon.png',
       logo: {
         src: './src/assets/logo.png',
         replacesTitle: false
@@ -26,7 +26,8 @@ export default defineConfig({
       tableOfContents: {
         minHeadingLevel: 2,
         maxHeadingLevel: 3
-      }
+      },
+      credits: false
     }),
     tailwind({ applyBaseStyles: false }),
     playformCompress()
