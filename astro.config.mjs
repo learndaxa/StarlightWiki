@@ -11,6 +11,7 @@ export default defineConfig({
     starlight({
       title: import.meta.env.VITE_TITLE,
       customCss: ['./src/tailwind.css'],
+      favicon: './src/assets/logo.png',
       logo: {
         src: './src/assets/logo.png',
         replacesTitle: false
