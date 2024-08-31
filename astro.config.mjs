@@ -1,7 +1,7 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import playformCompress from '@playform/compress';
-
+import starlightImageZoom from 'starlight-image-zoom';
 import tailwind from '@astrojs/tailwind';
 
 // https://astro.build/config
@@ -27,7 +27,8 @@ export default defineConfig({
         minHeadingLevel: 2,
         maxHeadingLevel: 3
       },
-      credits: false
+      credits: false,
+      plugins: [starlightImageZoom()]
     }),
     tailwind({ applyBaseStyles: false }),
     playformCompress()
