@@ -3,6 +3,7 @@ import starlight from '@astrojs/starlight';
 import playformCompress from '@playform/compress';
 import starlightImageZoom from 'starlight-image-zoom';
 import tailwind from '@astrojs/tailwind';
+import { sidebar } from './list_sidebar';
 
 // https://astro.build/config
 export default defineConfig({
@@ -28,7 +29,8 @@ export default defineConfig({
         maxHeadingLevel: 3
       },
       credits: false,
-      plugins: [starlightImageZoom()]
+      plugins: [starlightImageZoom()],
+      sidebar: sidebar
     }),
     tailwind({ applyBaseStyles: false }),
     playformCompress()
