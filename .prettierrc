@@ -4,6 +4,13 @@
   "singleQuote": true,
   "trailingComma": "none",
   "printWidth": 1000000,
-  "plugins": [],
-  "overrides": []
+  "plugins": ["prettier-plugin-astro"],
+  "overrides": [
+    {
+      "files": "*.astro",
+      "options": {
+        "parser": "astro"
+      }
+    }
+  ]
 }
